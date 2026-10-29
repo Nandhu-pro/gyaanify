@@ -6,19 +6,38 @@
 <title>Learning paths · Gyaanify</title>
 <meta name="description" content="Gyaanify: clear, practical lessons on security, cloud, AI and careers.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#0078D4',dark:'#106EBE',light:'#F3F2F1'}} , fontFamily:{sans:['Segoe UI','Segoe UI Variable','system-ui','sans-serif']}}}};</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap nav">
-  <a class="logo" href="index.html" aria-label="Gyaanify home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="8" fill="currentColor"/><path d="M22.5 11.2A8 8 0 1 0 24 16h-8" fill="none" stroke="var(--logo-cut)" stroke-width="3" stroke-linecap="square"/><rect x="21" y="21" width="3" height="3" fill="var(--logo-cut)"/></svg><span>Gyaanify</span></a>
-  <nav class="menu" aria-label="Main"><a href="index.html">Home</a><a href="paths.html" aria-current="page">Learning paths</a><a href="azure.html">Azure</a><a href="resources.html">Resources</a></nav>
-  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" id="burger"><span></span><span></span></button>
-</div>
-<nav class="mobile" id="mobileNav" aria-label="Main" hidden><a href="index.html">Home</a><a href="paths.html" aria-current="page">Learning paths</a><a href="azure.html">Azure</a><a href="resources.html">Resources</a></nav>
+
+<header class="site-header" aria-label="Gyaanify header">
+  <div class="wrap site-nav">
+    <a class="site-logo" href="index.html" aria-label="Gyaanify home"><span class="site-logo-mark">G</span><span>Gyaanify</span></a>
+    <nav class="site-menu" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="paths.html">Paths</a>
+      <a href="azure.html">Certifications</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+    <div class="site-header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color mode">🌙</button>
+      <button class="site-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" id="site-menu-toggle">☰</button>
+      <div class="site-profile" aria-label="User profile"><span class="site-avatar">AS</span><span class="site-profile-name">Alex S.</span></div>
+    </div>
+  </div>
+  <nav class="site-mobile-nav" id="site-mobile-nav" aria-label="Mobile navigation" hidden>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="paths.html">Paths</a>
+    <a href="azure.html">Certifications</a>
+    <a href="resources.html">Resources</a>
+  </nav>
 </header>
+
 <main id="main">
 
 <section class="page-head"><div class="wrap">
@@ -94,15 +113,50 @@
 </div></section>
 
 </main>
-<footer class="foot"><div class="wrap">
-  <div class="foot-grid">
-    <div><a class="logo" href="index.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="8" fill="currentColor"/><path d="M22.5 11.2A8 8 0 1 0 24 16h-8" fill="none" stroke="var(--logo-cut)" stroke-width="3" stroke-linecap="square"/><rect x="21" y="21" width="3" height="3" fill="var(--logo-cut)"/></svg><span>Gyaanify</span></a><p>Clear, practical lessons on security, cloud, AI and careers. Free to learn.</p></div>
-    <div><h4>Learn</h4><ul><li><a href="path-cyber-safety.html">Cyber Safety Essentials</a></li><li><a href="path-cloud-basics.html">Cloud Computing Basics</a></li><li><a href="path-devops-foundations.html">DevOps Foundations</a></li></ul></div>
-    <div><h4>More paths</h4><ul><li><a href="path-ai-for-everyone.html">AI for Everyone</a></li><li><a href="path-career-starter.html">Tech Career Starter</a></li><li><a href="path-hackathon-playbook.html">Hackathon Playbook</a></li></ul></div>
-    <div><h4>Explore</h4><ul><li><a href="paths.html">All learning paths</a></li><li><a href="azure.html">Azure certifications</a></li><li><a href="resources.html">Free resources</a></li></ul></div>
+
+<footer class="site-footer">
+  <div class="wrap site-footer-inner">
+    <div class="site-footer-grid">
+      <div class="site-footer-brand">
+        <a class="site-logo" href="index.html" aria-label="Gyaanify home"><span class="site-logo-mark">G</span><span>Gyaanify</span></a>
+        <p>Clear, practical learning for cloud, AI, security, and career growth. Built for enterprise-ready skill building.</p>
+      </div>
+      <div>
+        <h4>Learning</h4>
+        <ul>
+          <li><a href="paths.html">All paths</a></li>
+          <li><a href="path-cyber-safety.html">Cyber Safety</a></li>
+          <li><a href="path-cloud-basics.html">Cloud Basics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Certifications</h4>
+        <ul>
+          <li><a href="azure.html">Azure roadmap</a></li>
+          <li><a href="cert-az-900.html">AZ-900</a></li>
+          <li><a href="cert-az-104.html">AZ-104</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="resources.html">Free resources</a></li>
+          <li><a href="path-ai-for-everyone.html">AI for Everyone</a></li>
+          <li><a href="shorts.html">Shorts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer-bottom">
+      <span>© 2026 Gyaanify. All rights reserved.</span>
+      <div class="site-social" aria-label="Social media links">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">x</a>
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+      </div>
+    </div>
   </div>
-  <div class="legal"><span>© 2026 Gyaanify</span><span>Cyber fraud in India? Call 1930 or visit cybercrime.gov.in</span></div>
-</div></footer>
+</footer>
+
 <script src="assets/app.js"></script>
 </body>
 </html>
